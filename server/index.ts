@@ -14,7 +14,7 @@ async function fetchPayments(url: string): Promise<Payment[]> {
   const payments = response.data._embedded.records;
   const nextUrl = response.data._links.next.href;
 
-  if (nextUrl) {
+  if (nextUrl !== url) {
     const nextPayments = await fetchPayments(nextUrl);
     return [...payments, ...nextPayments];
   }
@@ -27,7 +27,7 @@ async function fetchTrades(url: string): Promise<Trade[]> {
   const trades = response.data._embedded.records;
   const nextUrl = response.data._links.next.href;
 
-  if (nextUrl) {
+  if (nextUrl !== url) {
     const nextTrades = await fetchTrades(nextUrl);
     return [...trades, ...nextTrades];
   }
