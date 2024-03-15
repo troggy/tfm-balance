@@ -1,0 +1,29 @@
+{
+    "name": "stellar-eurmtl-balance-history",
+    "version": "1.0.0",
+    "description": "An app that displays the historical balances of the EURMTL asset for a Stellar account",
+    "main": "server/index.ts",
+    "scripts": {
+        "start": "bun server/run.ts",
+        "dev": "bun i && bun --watch server/index.ts"
+    },
+    "dependencies": {
+        "axios": "latest",
+        "cookie-parser": "latest",
+        "esbuild": "latest",
+        "express": "latest",
+        "react": "latest",
+        "react-dom": "latest",
+        "recharts": "latest",
+        "socket.io": "latest",
+        "socket.io-client": "latest",
+        "sqlite3": "latest"
+    },
+    "devDependencies": {
+        "@types/cookie-parser": "latest",
+        "@types/express": "latest",
+        "@types/react": "latest",
+        "@types/react-dom": "latest",
+        "@types/sqlite3": "latest"
+    }
+}
